@@ -6,21 +6,21 @@ import clips
 BASE_DIR = Path(__file__).resolve().parent
 CLIPS_FILE = BASE_DIR / "loan_analysis.clp"
 
-BG = "#F4F6F8"
+BG = "#F5F7FB"
 CARD = "#FFFFFF"
-TEXT = "#1F2937"
+TEXT = "#273449"
 MUTED = "#6B7280"
-BORDER = "#E5E7EB"
-PRIMARY = "#2563EB"
-PRIMARY_HOVER = "#1D4ED8"
-DARK = "#111827"
-SOFT = "#F8FAFC"
-SUCCESS = "#166534"
-SUCCESS_BG = "#DCFCE7"
-WARNING = "#92400E"
-WARNING_BG = "#FEF3C7"
-DANGER = "#991B1B"
-DANGER_BG = "#FEE2E2"
+BORDER = "#E2E6EF"
+PRIMARY = "#5B5BD6"
+PRIMARY_HOVER = "#4949BE"
+DARK = "#182238"
+SOFT = "#F4F3FF"
+SUCCESS = "#167A68"
+SUCCESS_BG = "#E5F6F2"
+WARNING = "#A86612"
+WARNING_BG = "#FFF5DE"
+DANGER = "#B64B55"
+DANGER_BG = "#FDECEE"
 
 
 class LoanAnalysisApp:
@@ -258,6 +258,13 @@ class LoanAnalysisApp:
             bg=CARD,
             fg=MUTED,
         ).pack(anchor="w", pady=(2, 0))
+
+        tk.Frame(
+            frame,
+            bg=PRIMARY,
+            height=2,
+            width=42,
+        ).pack(anchor="w", pady=(7, 0))
 
     def add_entry(self, parent, row, column, label, variable, hint):
         frame = tk.Frame(parent, bg=CARD)
@@ -553,7 +560,7 @@ class LoanAnalysisApp:
             text=value,
             font=("Segoe UI", 15, "bold"),
             bg=CARD,
-            fg=TEXT,
+            fg=PRIMARY,
         ).pack(anchor="w", padx=16, pady=(0, 13))
 
     @staticmethod
